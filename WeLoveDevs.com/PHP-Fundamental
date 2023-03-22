@@ -1,0 +1,262 @@
+1. What is the main difference between the include and require functions in PHP?
+
+  include executes the code of the included file, while require merely imports the variables and functions from the file.
+  - include produces a warning if the file is not found, while require generates a fatal error.
+  include is used to include local files, while require is used to include remote files.
+  include is deprecated and require is the recommended method for including files in PHP.
+  
+2. What is the value of the PHP_FLOAT_MIN variable ?
+
+  the smallest representable float number
+  - the smallest representable positive float number
+  the smallest representable positive float number x such as x+1.0 != 1.0
+  the smallest float number representable under exponential form
+  
+3. Which of the following statements are true ?
+
+  user input can be trusted as long as it is not anonymous
+  data protection is only done at the database level and not at the php level
+  - well-written SQL requests protect against SQL injections
+  none of these statements
+  
+4. Which of the following statements are true ?
+
+  - It is possible to keep a local variable with the keyword static even after the destruction of the function which created it
+  $GLOBALS[variable] and global variable are equivalent
+  The global keyword allows to access a global variable in a function
+  The static keyword allows to access a local variable outside of its function
+  
+5. Which superglobal variables hold the information passed through a HTML form ?
+
+  - $_REQUEST
+  $_POST
+  $_SESSION
+  $_GET
+  
+6.  Of which types is the following array ?
+          $cars = array (  
+            array("Volvo",22,18),  
+            array("BMW",15,13),  
+            array("Saab",5,2),  
+            array("Land Rover",17,15)  
+          );
+          
+  indexed
+  associative
+  multidimensional
+  bidimensional
+  
+7. What are the risks when running the following code ?
+          <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+          
+  A fatal flaw that would render the server unreachable
+  An HTML code injection
+  A XSS vulnerability
+  A SQL injection
+  
+8. What is the output of the following code ?
+          $x = 42; 
+          function f() {
+            echo "The value of x is : $x";
+          }
+          f();
+          
+  "The value of x is : 42"
+  An Undefined Variable warning is raised
+  A Value Error error is raised
+  "The value of x is :"
+
+9. What is the output of the following code ?
+          for ($x = 0; $x < 4; $x++) {
+            echo $x <=> 1;
+            echo ' ';
+          }
+          
+  1 0 -1 -1
+  -1 0 1 1
+  0 0 1 1
+  -1 -1 1 1
+  
+10. What is the value of the $lengths variable after the following code is executed ?
+          function foobar($item) {
+            return strlen($item);
+          }
+          $strings = ["javascript", "php", "python", "c++"];
+          $lengths = array_map("foobar", $strings);
+  
+  an array with the values "foobar","foobar","foobar","foobar"
+  A syntax error is raised
+  an array with the values 10, 3, 6, 3
+  None of these answers
+  
+11. What is the is_long() function for ?
+
+  if measures the execution time of a given function
+  it returns true if the argument is an integer
+  it is strictly equivalent to the function is_integer()
+  it returns true if the argument is a float
+  
+12. What is the define() function for ?
+
+  defining a global class
+  defining a global function
+  defining a globale constant for the php file
+  defining a global regular expression
+  
+13. What is the asort() function for ?
+
+  sorting associative arrays in ascending order according to the key
+  sorting associative arrays in ascending order according to the value
+  sorting associative arrays in descending order according to the key
+  sorting associative arrays in descending order according to the value
+  
+14. What is the output of the following code ?
+          $x = "welove";
+          $y = "devs";
+          $z = strlen('A') ? $x : $y;
+
+          echo $z;
+          
+  "welovedevs"
+  "devs"
+  "welove"
+  "Awelovedevs"
+  
+15.What is the output of the following code ?
+          function addNumbers(float $a, float $b) : int {
+
+          return (int)($a + $b);
+
+          }
+
+          echo addNumbers(1.7, 5.2);
+
+  A casting error
+  6
+  6.9
+  7
+
+16. What do keyword and instruction need to be replaced by in the following code to output the welcome message ?
+          class Greetings {
+          <keyword> WELCOME_MESSAGE = "Welcome to welovedevs !";
+            public function greet() {
+              <instruction>;
+            }
+          }
+          $message = new Greetings();
+          $message->greet();
+
+  keyword contains const and instruction contains echo $this->WELCOME_MESSAGE;
+  keyword contains final and instruction contains echo self::WELCOME_MESSAGE;
+  keyword contains const and instruction contains echo self::WELCOME_MESSAGE;
+  keyword contains final and instruction contains echo $this->WELCOME_MESSAGE;
+
+17. What does the function preg_match_all($pattern, $str) ?
+
+  returns true if $pattern if found in $str, false otherwise
+  returns 1 if $pattern is found in $str, 0 otherwise
+  replaces occurences of $pattern in $str by another string
+  returns the number of occurences of $pattern in $str
+
+18. What is the output of the following code ?
+          function add_five(&$value) {
+            $value += 5;
+          }
+          $num = 2;
+          add_five($num);
+          echo $num;
+  2
+  5
+  7
+  A syntax error is raised
+  
+19. Which of the following statements are true ?
+
+  $_GET is an array retrieved by the script via the HTTP GET method
+  $_POST is an array retrieved by the script via the HTTP POST method
+  $_GET is an array retrieved by the script from the URL parameters
+  $_GET is the best choice to pass on passwords and confidential information
+
+20. What is the output of the following code ?
+          if ("welove" <> "devs") {
+            $color = "blue";
+          }
+          echo $color = $color ?? "red";
+
+  A syntax error is raised
+  "blue"
+  "red"
+  An Undefined variable error is raised
+  
+21. What is the output of the following code ?
+          $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+          $arr = json_decode($jsonobj, true);
+          print $arr->Ben;
+
+  37
+  "Ben:37"
+  An error
+  None of these answers
+
+22. Which of the following statements are correct ?
+
+php8 is loosely-typed
+the auto keyword exists in php8 and infers a type to the variable according to its value
+php8 is strongly-typed
+the type of a variable needs to be specified during its creation if the keyword strict is defined
+
+23.  Which of these XML parsers exist in php8 ?
+
+  XMLReader of type "Event-Based"
+  XMLReader of type "Tree-Based"
+  SimpleXML of type "Tree-Based"
+  SimpleXML of type "Event-Based"
+  
+24. Which of these syntaxes handling exceptions are correct ?
+
+  try {
+    instruction1;
+  } finally {
+    instruction3;
+  }
+
+
+  try {
+    instruction1;
+  } catch(Exception $e) {
+    instruction2;
+  } finally {
+    instruction3;
+  }
+
+  throw {
+    instruction1;
+  } catch(Exception $e) {
+    instruction2;
+  }
+
+  throw {
+    instruction1;
+  } catch(Exception $e) {
+    instruction2;
+  }
+  
+25. What is the output of the following code ?
+          $x = 0;
+          do {
+            echo ++$x;
+            echo $x++;
+            echo " ";
+          } while ($x < 10)
+
+  12 34 56 78 910
+  02 24 46 68 810
+  01 23 45 67 89
+  11 33 55 77 99
+
+26. Which of these statements on access modifiers are correct ?
+
+  public gives access to the method or attribute from anywhere in the script
+  protected limits the access to the class only
+  private is the default access mode
+  None of these answers are correct
