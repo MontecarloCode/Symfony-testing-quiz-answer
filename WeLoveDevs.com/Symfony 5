@@ -1,0 +1,56 @@
+Symfony 5 test for WeLoveDevs.com
+1. symfony5 minumim php version
+  7.2.5
+2. how to read value of a form field in template branch 
+  {{ form.FIELD.vars.VALUE }}
+3. How to override the vendor directory
+  Set the vendor-dir option in the composer.json
+4. What is the signature of Kernel :: terminate()?
+  terminate(Request $request, Response $response);
+5. Which command to use to verify that the arguments injectted into a service match their type declaration
+  php bin/console debug:container
+6. which class is not part of symfony?
+  Fullstack
+7. Which class no longer exists in the symfony5 version?
+  Symfony/Bundle/FrameworkBundle/Controller
+8. What constraint does not exist?
+  DomainName(HostName)
+9. Which class to use to inject Twig into a Service?
+  Twig\Environment
+10. What is the 1st Event Dispatched by Symfony?
+  kernel.response
+11. When configuring a service, in which case should the shared option be set to false?
+  When returning a new instance of the service
+12. What does the 'composer dump-env prod' command do?
+  it parses all the .env and dumps their values into an .env.local.php file
+13. Which format respects the good naming practices of a TWIG file?
+  - form_create_product.html.twig
+  FormCreateProduct.html.twig
+  Formcreateproduct.html.twig
+  Form_Create_Product.html.twig
+14. Who is the intruder?
+  access_control
+  firewalls
+  providers
+  - router
+15. Which statement is wrong?
+ - Symfony is is just an MVC framework
+  Symfony is set of PHP components
+  Symfony is a framework for web projects
+  Symfony is tightly based on the HTTP request-response paradigm
+16. In the ContainerInterface which method does not exist?
+  all
+  initialized
+  hasParameter
+  set
+17. In which year was the first version of Symfony released?
+  2005
+18. How to create a Twig extension
+  extend AbstractExtension
+  implements GlobalsInterface
+19. Which of these Symfony components does not exist?
+  - FileHandler
+  - Ldap
+  Lock
+  VarDumper
+20. How to use the denyAccessUnlessGranted method of the Abstract Controller?
