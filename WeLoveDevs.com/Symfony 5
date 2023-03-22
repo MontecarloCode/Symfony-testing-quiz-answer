@@ -54,3 +54,4 @@ Symfony 5 test for WeLoveDevs.com
   Lock
   VarDumper
 20. How to use the denyAccessUnlessGranted method of the Abstract Controller?
+  $this->denyAccessUnlessGranted('view', $post);
