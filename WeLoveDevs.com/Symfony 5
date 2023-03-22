@@ -6,11 +6,20 @@ Symfony 5 test for WeLoveDevs.com
 3. How to override the vendor directory
   Set the vendor-dir option in the composer.json
 4. What is the signature of Kernel :: terminate()?
-  terminate(Request $request, Response $response);
+  - terminate(Request request,Responseresponse)
+  terminate(Response response,Requestrequest, $debug = false)
+  terminate(Request request,Responseresponse, $debug = true)
+  terminate(Response response,Requestrequest)
 5. Which command to use to verify that the arguments injectted into a service match their type declaration
-  php bin/console debug:container
+  php bin/console lint: container
+  - php bin/console debug: container
+  php bin/console lint: container --check
+  php bin/console debug: container --check
 6. which class is not part of symfony?
+  - AdvancedUserInterface
   Fullstack
+  ExpressionCacheWarmer
+  DataCollector
 7. Which class no longer exists in the symfony5 version?
   Symfony/Bundle/FrameworkBundle/Controller
 8. What constraint does not exist?
@@ -39,7 +48,7 @@ Symfony 5 test for WeLoveDevs.com
   Symfony is a framework for web projects
   Symfony is tightly based on the HTTP request-response paradigm
 16. In the ContainerInterface which method does not exist?
-  all
+  - all
   initialized
   hasParameter
   set
@@ -50,7 +59,7 @@ Symfony 5 test for WeLoveDevs.com
   implements GlobalsInterface
 19. Which of these Symfony components does not exist?
   - FileHandler
-  - Ldap
+  Ldap
   Lock
   VarDumper
 20. How to use the denyAccessUnlessGranted method of the Abstract Controller?
