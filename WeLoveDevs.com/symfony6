@@ -1,0 +1,81 @@
+1. How to use a constant in Twig?
+  {{ use_constant('Namespace\Classname::CONSTANT_NAME') }}
+  {{ const('Namespace\Classname::CONSTANT_NAME') }}
+  - {{ constant('Namespace\Classname::CONSTANT_NAME') }}
+  It's not possible
+2. Is it possible to use templates instead of twig in symfony?
+  yes
+3. 
+  yes
+4. Events listeners are easier to reuse because the knowledge of the events is kept in the class rather than in the service definition.
+  true
+5.What security providers don't exist?
+  entity
+  ldap
+  memory
+  - sso
+6. Which command checks that the arguments injected into services match their type declarations?
+php bin/console debug:container
+php bin/console lint:container
+php bin/console container:check
+php bin/console check:container
+7. What are the directories to which you must give write permissions on your web server?
+var/log
+8. 
+count($validate)
+9.Which method does not exist in the classSymfony\Component\HttpKernel\Event\KernelEvent;?
+public function getKernel(): HttpKernelInterface
+- public function isMasterRequest(): Request
+public function getRequest(): Request
+public function getRequestType(): int
+10. which method doesn't exist in class 
+getParameter
+get
+- getDoctrine
+file
+11. Which statement should we use to replace ??? and send the notification?
+  - $notifier->send($recipient; $notification);
+  $notifier->notify($recipient; $notification);
+  $notifier->send($notification, $recipient);
+  $notifier->notify($notification, $recipient);
+12. What does the 'auto' password hasher do?
+  It allows you to create a custom Password Hasher
+  - It selects the best available hasher on your system.
+  This option does not exist
+13. Which statement is true?
+            #[When(env: 'dev')]
+            #[When(env: 'test')]
+            class Foo
+            {
+            }
+  The class Foo exists only in the "dev" and "test" environment.
+  - The class Foo exists is registered as a service only in the "dev" and "test" environment
+  This code will throw an error
+  The class Foo is public only in the "dev" and "test" environment
+14. When is the end of support of Symfony 6.0
+  January 2023
+  November 2022
+  July 2023
+  - November 2023
+15. Does a Bundle can be enabled by environment?
+  No
+  - Yes
+16. To make my voter faster i can
+  implement the interface Symfony\Component\Security\Core\Authorization\Voter\VoterInterface
+  It's not possible
+  - implement the interface Symfony\Component\Security\Core\Authorization\Voter\CacheableVoterInterface
+  implement the interface Symfony\Component\Security\Core\Authorization\Voter\FastVoterInterface
+17. Which kernel event does not exist?
+  kernel.request
+  kernel.controller_arguments
+  - kernel.error
+  kernel.finish_request
+18. Does the HttpClient repects the PSR-18 natively?
+  true
+19. Who is the intruder?
+  Symfony\Component\Console\Command\Command::FAILURE
+  Symfony\Component\Console\Command\Command::SUCCESS
+  - Symfony\Component\Console\Command\Command::ERROR
+  Symfony\Component\Console\Command\Command::INVALID
+20. Extending the class Symfony\Bundle\FrameworkBundle\Controller\AbstractController; allows my controller to be declared as a service
+  -no
