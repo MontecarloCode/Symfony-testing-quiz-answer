@@ -15,10 +15,10 @@
   memory
   - sso
 6. Which command checks that the arguments injected into services match their type declarations?
-php bin/console debug:container
-php bin/console lint:container
-php bin/console container:check
-php bin/console check:container
+  php bin/console debug:container
+  php bin/console lint:container
+  php bin/console container:check
+  php bin/console check:container
 7. What are the directories to which you must give write permissions on your web server?
 var/log
 8. 
